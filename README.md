@@ -1,9 +1,9 @@
 # IT Asset Management Database (ITAM DB)
-## CS103: Databases Portfolio Project
+## Databases Portfolio Project
 
 **Author:** Randall James  
 **Date:** June 2026  
-**Purpose:** Portfolio project demonstrating end-to-end database design, implementation, optimization, and analytical querying skills in PostgreSQL. Built specifically to showcase SQL proficiency for IT Data Analyst / Data Coordinator / Project Coordinator roles.
+**Purpose:** Portfolio project demonstrating end-to-end database design, implementation, optimization, and analytical querying skills in PostgreSQL.
 
 ---
 
