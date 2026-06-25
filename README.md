@@ -200,8 +200,8 @@ ITAM-Portfolio-Project/
 ├── data/ (README + sample CSV)
 ├── docs/ (ERD guidance)
 └── analysis/
-    ├── itam_starter_analysis.ipynb   ← NEW
-    └── requirements.txt              ← NEW
+    ├── itam_starter_analysis.ipynb   
+    └── requirements.txt              
 ```
 
 ---
