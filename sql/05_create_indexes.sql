@@ -113,6 +113,7 @@ CREATE INDEX IF NOT EXISTS idx_audit_logs_new_data_gin
 -- ============================================================================
 -- VERIFICATION & MAINTENANCE
 -- ============================================================================
+
 -- After creating indexes, always ANALYZE to update statistics
 ANALYZE assets;
 ANALYZE employees;
@@ -120,12 +121,10 @@ ANALYZE maintenance_records;
 ANALYZE software_licenses;
 ANALYZE license_allocations;
 
--- Optional: REINDEX if you suspect bloat (not usually needed right after creation)
--- REINDEX TABLE assets;
-
+-- Verification query (FIXED)
 SELECT 
     schemaname,
-    tablename,
+    relname AS tablename,
     indexname,
     pg_size_pretty(pg_relation_size(indexrelid)) AS index_size
 FROM pg_stat_user_indexes
