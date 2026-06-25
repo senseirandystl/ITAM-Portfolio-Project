@@ -182,20 +182,17 @@ erDiagram
 ## Project Structure
 
 ```
-ITAM_Portfolio_Project/
+ITAM-Portfolio-Project/
 ├── README.md
 ├── docker-compose.yml
-├── sql/
-│   ├── 01_create_schema.sql          # Tables, PKs, FKs, basic constraints
-│   ├── 02_seed_data.sql              # Realistic INSERT statements (ordered)
-│   ├── 03_add_constraints_and_triggers.sql  # Additional CHECKs, audit triggers
-│   ├── 04_create_roles.sql           # RBAC: data_analyst, it_admin, auditor
-│   ├── 05_create_indexes.sql         # Strategic indexes + explanations
-│   ├── 06_analytical_queries.sql     # 12+ production-style analytical queries
-│   └── 07_maintenance.sql            # VACUUM, ANALYZE, monitoring queries
-├── data/                             # Optional CSV exports for bulk load (future)
-└── docs/
-    └── ERD.png                       # (Optional) High-res diagram export
+├── LICENSE
+├── .gitignore
+├── sql/ (7 files)
+├── data/ (README + sample CSV)
+├── docs/ (ERD guidance)
+└── analysis/
+    ├── itam_starter_analysis.ipynb   ← NEW
+    └── requirements.txt              ← NEW
 ```
 
 ---
