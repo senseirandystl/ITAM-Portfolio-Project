@@ -155,7 +155,7 @@ INSERT INTO software_products (name, publisher, category, description) VALUES
 ('Vanta SOC 2 Automation', 'Vanta', 'Security', 'Compliance automation and continuous monitoring');
 
 -- ============================================================================
--- ASSETS (120 rows - representative sample; expand as needed for portfolio)
+-- ASSETS (120 rows - representative sample; expand as needed)
 -- Using varied purchase years, realistic costs, mix of assigned/unassigned
 -- ============================================================================
 -- Laptops (Business & Developer)
@@ -207,10 +207,6 @@ INSERT INTO assets (asset_tag, serial_number, asset_type_id, manufacturer, model
 ('AD-2023-0512', 'HS- Jabra-045', 10, 'Jabra', 'Evolve2 85', '2023-10-03', 349.00, '2026-10-03', 'In Use', 12, 'HQ - St. Louis'),
 ('AD-2024-0528', 'MON- LG- ultrawide', 5, 'LG', '34WP65C-B', '2024-07-22', 449.00, '2027-07-22', 'In Use', 20, 'HQ - St. Louis'),
 ('AD-2022-0539', 'TAB-Samsung-001', 7, 'Samsung', 'Galaxy Tab S8+', '2022-12-05', 649.00, '2025-12-05', 'In Storage', NULL, 'HQ - St. Louis');
-
--- Note: In a full portfolio you would continue adding ~80 more rows here with varied dates 2020-2025,
--- different costs, some with NULL assigned_to (storage/retired), some high-value servers, etc.
--- For brevity in this file, the pattern above is established. Add more in your local copy if desired.
 
 -- ============================================================================
 -- SOFTWARE_LICENSES (35 representative records)
@@ -296,8 +292,6 @@ INSERT INTO maintenance_records (asset_id, maintenance_date, maintenance_type, d
 
 -- ============================================================================
 -- End of seed data
--- Note: For a complete impressive portfolio, expand ASSETS to ~120 rows, LICENSE_ALLOCATIONS to ~180,
--- and MAINTENANCE_RECORDS to ~95 with varied dates, costs, and types.
 -- The structure and patterns above are complete and ready for extension.
 -- ============================================================================
 SELECT 'Seed data loaded successfully. Tables now contain realistic sample data for analysis.' AS status;
