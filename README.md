@@ -210,7 +210,7 @@ ITAM-Portfolio-Project/
 
 ```bash
 # 1. Clone or download this repo
-cd ITAM_Portfolio_Project
+cd ITAM-Portfolio-Project
 
 # 2. Start PostgreSQL container
 docker compose up -d
