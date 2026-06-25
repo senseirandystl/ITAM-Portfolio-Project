@@ -47,41 +47,49 @@ IT Asset Management is highly relevant to **IT Data Analyst** positions because 
 
 ```mermaid
 erDiagram
+    %% Core relationships (ordered for better layout)
     DEPARTMENTS ||--o{ EMPLOYEES : "employs"
-    EMPLOYEES ||--o{ EMPLOYEES : "manages"
     EMPLOYEES ||--o{ ASSETS : "assigned to"
     EMPLOYEES ||--o{ MAINTENANCE_RECORDS : "performs"
-    EMPLOYEES ||--o{ LICENSE_ALLOCATIONS : "receives"
-    
+    EMPLOYEES ||--o{ LICENSE_ALLOCATIONS : "receives allocation"
+    ASSETS ||--o{ MAINTENANCE_RECORDS : "has"
+    SOFTWARE_LICENSES ||--o{ LICENSE_ALLOCATIONS : "allocated from"
+    SOFTWARE_PRODUCTS ||--o{ SOFTWARE_LICENSES : "has licenses"
+    VENDORS ||--o{ SOFTWARE_LICENSES : "supplies"
+
+    %% Note: Self-referencing manager relationship on EMPLOYEES (manager_id → employee_id) 
+    %% is intentionally omitted from the diagram to avoid ugly routing. Documented below.
+
     DEPARTMENTS {
         int department_id PK
         string name UK
         string location
         numeric budget
         timestamptz created_at
+        timestamptz updated_at
     }
-    
+
     EMPLOYEES {
         int employee_id PK
         string first_name
         string last_name
         string email UK
         int department_id FK
-        int manager_id FK
+        int manager_id FK "self-ref (manager)"
         string job_title
         date hire_date
         string status
         timestamptz created_at
         timestamptz updated_at
     }
-    
+
     ASSET_TYPES {
         int asset_type_id PK
         string name UK
         string category
         int typical_lifespan_years
     }
-    
+
     ASSETS {
         int asset_id PK
         string asset_tag UK
@@ -96,21 +104,21 @@ erDiagram
         timestamptz created_at
         timestamptz updated_at
     }
-    
+
     VENDORS {
         int vendor_id PK
         string name UK
         string contact_email
         string support_phone
     }
-    
+
     SOFTWARE_PRODUCTS {
         int product_id PK
         string name
         string publisher
         string category
     }
-    
+
     SOFTWARE_LICENSES {
         int license_id PK
         int product_id FK
@@ -121,8 +129,9 @@ erDiagram
         date purchase_date
         date expiration_date
         timestamptz created_at
+        timestamptz updated_at
     }
-    
+
     LICENSE_ALLOCATIONS {
         int allocation_id PK
         int license_id FK
@@ -133,7 +142,7 @@ erDiagram
         int seats_allocated
         string notes
     }
-    
+
     MAINTENANCE_RECORDS {
         int record_id PK
         int asset_id FK
@@ -146,7 +155,7 @@ erDiagram
         text resolution_notes
         timestamptz created_at
     }
-    
+
     AUDIT_LOGS {
         bigint log_id PK
         string table_name
