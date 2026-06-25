@@ -276,21 +276,6 @@ INSERT INTO license_allocations (license_id, employee_id, asset_id, allocated_da
 (22, 35, NULL, '2023-12-05', '2024-06-30', 1, 'Switched to 1Password - LastPass license returned');
 
 -- ============================================================================
--- MAINTENANCE_RECORDS (95 - sample)
--- ============================================================================
-INSERT INTO maintenance_records (asset_id, maintenance_date, maintenance_type, description, cost, performed_by_employee_id, downtime_hours, resolution_notes) VALUES
-(3, '2024-03-12', 'Corrective', 'Keyboard backlight failure on MacBook Pro', 0.00, 39, 2.5, 'Replaced keyboard assembly under AppleCare+ (no cost)'),
-(5, '2024-07-08', 'Preventive', 'Annual thermal paste reapplication and fan cleaning', 0.00, 39, 1.0, 'Preventive maintenance on high-performance dev machine'),
-(12, '2023-11-20', 'Corrective', 'Trackpad unresponsive after liquid spill', 450.00, 39, 4.0, 'Trackpad + top case assembly replaced; user data recovered'),
-(15, '2024-05-02', 'Upgrade', 'RAM upgrade 16GB → 32GB for ML workloads', 320.00, 39, 0.5, 'Crucial 32GB kit installed; verified stable'),
-(25, '2024-02-28', 'Inspection', 'Quarterly server health check - firmware updates applied', 0.00, 38, 0.25, 'All firmware current; no issues found'),
-(1, '2023-08-15', 'Corrective', 'Battery swelling - unit retired after repair attempt failed', 0.00, 39, 3.0, 'Battery replaced but swelling recurred; asset retired per policy'),
-(38, '2024-06-10', 'Corrective', 'iPhone screen replacement after drop', 279.00, 40, 1.5, 'Genuine Apple screen + battery health check performed'),
-(4, '2024-04-22', 'Preventive', 'Proactive SSD health check and firmware update', 0.00, 39, 0.5, 'Firmware updated; SMART status excellent');
-
--- Additional maintenance rows follow similar realistic patterns (battery, screen, thermal, storage, peripheral failures, warranty work)
-
--- ============================================================================
 -- End of seed data
 -- The structure and patterns above are complete and ready for extension.
 -- ============================================================================
