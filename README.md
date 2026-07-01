@@ -311,9 +311,12 @@ Data was generated to reflect real-world messiness (some assets retired, some li
 - [ ] Python ETL notebook (pandas + SQLAlchemy) demonstrating data pipeline skills
 - [ ] PostgREST or Hasura layer for REST API exposure (shows full-stack thinking)
 - [ ] Integrate with Metabase / Superset for visual dashboard example
-
+   
 ---
 
-## License & Attribution
+**About Me**  
+Randall James | Data Coordinator / Data Analyst / Project Manager  
+St. Louis, MO (O'Fallon area) | Open to remote, hybrid, or on-site within ~30 min commute  
+[LinkedIn](https://www.linkedin.com/in/randall-james-stl) | [GitHub](https://github.com/senseirandystl) | randalljames34@pm.me
 
-This is an original educational/portfolio project created by Randall James. Feel free to fork, adapt, and use in your own job search or learning. Credit appreciated but not required.
+*This project was created as part of my professional portfolio to demonstrate data analysis capabilities.*
